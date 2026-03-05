@@ -92,3 +92,55 @@
         height: 100%;
     }
 }
+
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Contact section general styling */
+#contact {
+    padding: 50px 20px;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-card .row {
+    display: flex;
+    gap: 30px; /* space between columns */
+    flex-wrap: wrap; /* allow wrapping on small screens */
+}
+
+.contact-card .col {
+    flex: 1;
+    min-width: 300px; /* ensures it doesn't get too narrow */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-card .row {
+        flex-direction: column; /* stack columns on mobile */
+    }
+
+    .contact-card .col iframe {
+        width: 100% !important;  /* map takes full width */
+        height: 400px !important; /* smaller height for mobile */
+    }
+
+    .contact-card .col form {
+        width: 100%;
+    }
+
+    .contact-title h2 {
+        font-size: 28px; /* smaller title for mobile */
+    }
+
+    .contact-title h5 {
+        font-size: 16px;
+    }
+}
