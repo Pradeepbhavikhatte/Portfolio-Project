@@ -512,8 +512,25 @@ form .form-input{
 
 
 /* footer section */
-.foot{
-    width: 100%;
-    text-align: center;
-}
+    .foot{
+        width: 100%;
+        text-align: center;
+    }
+    .footer-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px; /* space between text and icons */
+    }
+
+    .social-links a {
+        color: white;
+        font-size: 18px;
+        margin: 0 8px;
+        transition: 0.3s;
+    }
+
+    .social-links a {
+        color: black;
+    }
 
