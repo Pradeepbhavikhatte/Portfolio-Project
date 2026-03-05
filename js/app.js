@@ -36,6 +36,10 @@ Array.from(cirProgress).forEach(item => {
     },speed);
 });
 
+function downloadCV() {
+          window.open("./PRADEEP_BK_CV.pdf", "_blank");
+      }
+
 /* to display current year */
 document.querySelector(".yr").innerText =  new Date().getFullYear();
 

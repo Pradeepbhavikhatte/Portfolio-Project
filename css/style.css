@@ -147,7 +147,7 @@ header {
 
 .content .sub-title {
     font-size: 1.4rem;
-    color: var(--grey);
+    color: var(--warning);
 }
 
 .container .title {
