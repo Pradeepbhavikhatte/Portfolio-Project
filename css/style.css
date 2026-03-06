@@ -112,7 +112,7 @@ header {
 /* home block */
 #home-block {
     width: 100%;
-    height: 100vh;
+    height: 97vh;
     padding-top: 5rem;
 }
 
@@ -142,11 +142,11 @@ header {
 }
 
 .home-container .content {
-    line-height: 2;
+    line-height: 1.4;
 }
 
 .content .sub-title {
-    font-size: 1.4rem;
+    font-size: 1rem;
     color: var(--warning);
 }
 
@@ -200,10 +200,6 @@ header {
     color: var(--danger);
 }
 
-.about-title h5 {
-    font-size: 1.4rem;
-}
-
 .about-content .content {
     color: var(--dark-grey);
     font-size: 0.9rem;
@@ -227,21 +223,39 @@ header {
 }
 
 .about-content .list-group {
-    width: 80%;
+    width: 40%;
+    padding: 0;
 }
 
 .about-content .list-group li {
     list-style: none;
-    padding: 10px;
+    padding: 10px 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
+
+.about-content .list-group li strong {
+    width: 120px;  
+}
+
+.about-content .list-group li .txt {
+    color: black;
+    font-weight: bold;
+}
+
+.about-content .content p{
+    color: black;          
+    font-size: 15px;
+    line-height: 1.7;       
+    margin: 15px 0;
+}
+
 
 /* education */
 #education {
     padding-top: 3rem;
     padding-bottom: 3rem;
+    padding: 10px;
 }
 
 .education-container {
@@ -408,7 +422,6 @@ td,th {
     align-items: center;
     justify-content: center;
     background-color: rgba(40, 46, 10, 0.5);
-    visibility: hidden;
     transition: all 0.1s;
     text-align: center;
 }
@@ -474,12 +487,20 @@ td,th {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding-left: 20px;
+}
+
+.contact-card .row .col{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
 }
 
 .contact-card iframe{
     width: 100%;
-    height: 100px;
+    height: 400px;
     padding: 20px;
 }
 
@@ -498,7 +519,7 @@ td,th {
 form .form-input{
     width: 100%;
     height: 100%;
-    padding: 10px;
+    padding: 15px;
     border: 1px solid var(--dark-grey);
     border: none;
     border-radius: 6px;

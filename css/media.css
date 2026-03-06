@@ -83,6 +83,57 @@
         width: 100% !important;
     }
 }
+@media (max-width:768px){
+
+#home-block{
+    height: auto; 
+    padding-top: 60px;   
+}
+
+.home-container .row{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shape-1 img{
+    width: 70%;
+    margin-top: 20px;
+}
+
+}
+
+@media (max-width: 768px){
+
+    .about-content{
+        text-align: start;
+    }
+
+    .about-content .content p{
+        font-size: 15px;
+        padding: 0 14px;
+    }
+
+}
+
+/* Mobile View */
+@media (max-width: 768px){
+
+    .about-content .list-group{
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .about-content .list-group li{
+        justify-content: start;
+        gap: 10px;
+        padding-left: 20px;
+    }
+
+    .about-content .list-group li strong{
+        width: 90px;
+    }
+}
 
 @keyframes slideDown {
     0% {
@@ -112,35 +163,65 @@
 
 .contact-card .row {
     display: flex;
-    gap: 30px; /* space between columns */
-    flex-wrap: wrap; /* allow wrapping on small screens */
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .contact-card .col {
     flex: 1;
-    min-width: 300px; /* ensures it doesn't get too narrow */
+    min-width: 100px
 }
 
-/* Responsive adjustments */
+@media (max-width: 768px) {
+
+    .education-container .row .col .table {
+        min-width: 300px;  
+    }
+
+    td, th {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .education-title h2 {
+        font-size: 2rem;
+        text-align: start;
+    }
+}
+
 @media (max-width: 768px) {
     .contact-card .row {
-        flex-direction: column; /* stack columns on mobile */
+        flex-direction: column;
     }
 
     .contact-card .col iframe {
-        width: 100% !important;  /* map takes full width */
-        height: 400px !important; /* smaller height for mobile */
+        width: 100% !important;  
+        height: 400px !important;
     }
 
     .contact-card .col form {
         width: 100%;
+        background-color: lightgrey;
     }
-
     .contact-title h2 {
-        font-size: 28px; /* smaller title for mobile */
+        font-size: 28px;
     }
 
     .contact-title h5 {
         font-size: 16px;
+    }
+
+    .form-input{
+        height: 30px;       
+        padding: 2px 2px;    
+        font-size: 15px;
+    }
+
+    textarea.form-input{
+        height: 100px;
+        width: 220px; 
+    }
+    input.form-input{
+        width: 220px; 
     }
 }
