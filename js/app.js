@@ -2,9 +2,17 @@
 let menu = document.querySelector(".menu")
 let togBtn = document.querySelector("#toggler")
 
-togBtn.addEventListener("click", function() {
-    menu.classList.toggle("active");
-});
+if (menu && togBtn) {
+    togBtn.addEventListener("click", function() {
+        menu.classList.toggle("active");
+    });
+
+    menu.querySelectorAll("a").forEach((item) => {
+        item.addEventListener("click", function() {
+            menu.classList.remove("active");
+        });
+    });
+}
 
 
 /* progress bar logic */
@@ -35,10 +43,6 @@ Array.from(cirProgress).forEach(item => {
         }
     },speed);
 });
-
-function downloadCV() {
-          window.open("./PRADEEP_BK_CV.pdf", "_blank");
-      }
 
 /* to display current year */
 document.querySelector(".yr").innerText =  new Date().getFullYear();

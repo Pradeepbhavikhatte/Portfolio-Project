@@ -1,11 +1,11 @@
-
-@media screen and (max-width:990px) {
+@media screen and (max-width: 990px) {
     .menu {
         display: none;
     }
 
     .btn-toggler {
         display: block;
+        z-index: 10001;
     }
 
     nav {
@@ -18,210 +18,374 @@
         align-items: center;
         justify-content: center;
         position: absolute;
-        right: 0px;
-        top: 2.8rem;
+        left: 0;
+        right: 0;
+        top: 100%;
         background-color: var(--light);
         box-shadow: var(--shadow);
         width: 100%;
         margin: auto;
-        /* animation: slideDown 0.5s linear 0s 1; */
+        padding: 8px 0;
+        z-index: 9999;
     }
 
     .menu.active li {
         width: 100%;
         cursor: pointer;
-        /* animation: slideDown 1s linear 0s 1; */
+        text-align: center;
     }
 
-    .menu.active li:active {
-        color: var(--primary);
-    }
-
-    /* home block */
-    .home-container {
-        height: 100%;
+    #home-block .home-container.container {
         width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
+        max-width: 100%;
+        margin: 0;
+        padding-left: 12px;
+        padding-right: 12px;
     }
+
     .home-container .row {
         width: 100%;
         display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        height: auto;
+        flex-wrap: nowrap;
+    }
+
+    .home-container .row .col:first-child {
+        order: 1;
+        flex: 1 1 62%;
+        min-width: 0;
+        justify-content: flex-start;
+    }
+
+    .home-container .shape-1 {
+        order: 2;
+        flex: 0 0 38%;
+        min-width: 0;
+        justify-content: flex-end;
+    }
+
+    .home-container .shape-1 img {
+        width: clamp(140px, 34vw, 260px);
+        max-width: 100%;
+        height: auto;
+        margin-left: auto;
+        display: block;
+    }
+}
+
+@media (min-width: 50px) and (max-width: 770px) {
+    body,
+    #home-block {
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 94%;
+    }
+
+    #home-block {
+        padding-top: 4.8rem;
+    }
+
+    #home-block .home-container.container {
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-bottom: 20px;
+    }
+
+    #home-block .home-container .row {
+        gap: clamp(6px, 2vw, 14px);
+        justify-content: space-between;
+    }
+
+    #home-block .home-container .row .col:first-child {
+        flex: 1 1 64%;
+        min-width: 0;
+    }
+
+    #home-block .home-container .shape-1 {
+        flex: 0 0 36%;
+        min-width: 0;
+        justify-content: flex-end;
+    }
+
+    #home-block .home-container .shape-1 img {
+        width: clamp(84px, 30vw, 220px);
+    }
+
+    #home-block .content {
+        text-align: left;
+    }
+
+    #home-block .sub-title {
+        font-size: clamp(0.7rem, 2.4vw, 0.95rem);
+    }
+
+    #home-block .title {
+        font-size: clamp(1.02rem, 3.8vw, 1.8rem);
+        line-height: 1.25;
+        overflow-wrap: anywhere;
+    }
+
+    #home-block .title span {
+        font-size: clamp(1.05rem, 4.2vw, 1.95rem);
+    }
+
+    #home-block .btn {
+        font-size: clamp(0.7rem, 2.8vw, 1rem);
+        padding: 6px 9px;
+    }
+
+    #about .about-container {
+        padding: 14px 8px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .about-container .row {
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        height: 100%;
-        gap: 2rem;
+        text-align: left;
+        gap: 8px;
     }
 
-    .row .col {
-       display: flex;
-       align-items: center;
-       justify-content: center;
+    .about-container .row .col img {
+        width: min(80vw, 300px);
+        margin: 0 auto 10px;
+        display: block;
+    }
+
+    .about-content .about-title h2 {
+        font-size: clamp(1.6rem, 5.6vw, 2.2rem);
+        margin: 8px 0 10px;
+    }
+
+    .about-content {
+        text-align: left;
         width: 100%;
     }
 
-    .col {
-        background-color: rgba(255, 255, 255, 0.8);
-    }
-
-   .home-container .col img {
-        position: absolute;
-        top: 30%;
-        left:0;
-        z-index:-1;
-    }
-
-    /* about section */
-    .about-container .row .col:first-child {
-        display: none;
-    }
-
-    .about-container .row .col:last-child {
-        width: 100% !important;
-    }
-}
-@media (max-width:768px){
-
-#home-block{
-    height: auto; 
-    padding-top: 60px;   
-}
-
-.home-container .row{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.shape-1 img{
-    width: 70%;
-    margin-top: 20px;
-}
-
-}
-
-@media (max-width: 768px){
-
-    .about-content{
-        text-align: start;
-    }
-
-    .about-content .content p{
-        font-size: 15px;
-        padding: 0 14px;
-    }
-
-}
-
-/* Mobile View */
-@media (max-width: 768px){
-
-    .about-content .list-group{
-        width: 100%;
-        margin-top: 15px;
-    }
-
-    .about-content .list-group li{
-        justify-content: start;
-        gap: 10px;
-        padding-left: 20px;
-    }
-
-    .about-content .list-group li strong{
-        width: 90px;
-    }
-}
-
-@keyframes slideDown {
-    0% {
-        height: 0%;
-    }
-    100% {
-        height: 100%;
-    }
-}
-
-@media (max-width: 600px) {
-    .footer-container {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-/* Contact section general styling */
-#contact {
-    padding: 50px 20px;
-}
-
-.contact-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.contact-card .row {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.contact-card .col {
-    flex: 1;
-    min-width: 100px
-}
-
-@media (max-width: 768px) {
-
-    .education-container .row .col .table {
-        min-width: 300px;  
-    }
-
-    td, th {
-        padding: 8px;
+    .about-content .content {
+        margin-top: 8px;
         font-size: 14px;
     }
 
+    .about-content .content p {
+        font-size: 14px;
+        line-height: 1.6;
+        padding: 0 6px;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .about-content .list-group {
+        width: 100%;
+        margin-top: 12px;
+        padding: 0;
+    }
+
+    .about-content .list-group li {
+        justify-content: flex-start;
+        gap: 8px;
+        padding: 8px 0;
+    }
+
+    .about-content .list-group li strong {
+        width: 80px;
+        flex-shrink: 0;
+    }
+
+    .about-content .list-group li .txt {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .about-content .social-links {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
     .education-title h2 {
-        font-size: 2rem;
-        text-align: start;
+        font-size: clamp(1.4rem, 5vw, 2rem);
+        text-align: left;
+        margin-bottom: 12px;
+    }
+
+    .education-container .table {
+        min-width: 520px;
+        width: 100%;
+        table-layout: auto;
+    }
+
+    .education-container .table th,
+    .education-container .table td {
+        font-size: clamp(12px, 2.6vw, 14px);
+        padding: clamp(6px, 1.8vw, 10px);
+    }
+
+    .education-container .row .col {
+        width: 100%;
+        align-items: stretch;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .skills-container .skills-title h2 {
+        font-size: clamp(1.6rem, 5vw, 2.2rem);
+    }
+
+    #skills .skills-container .row .col .skills-card {
+        grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+        grid-gap: 14px;
+    }
+
+    .skills-card .card {
+        padding: 14px;
+    }
+
+    .skills-card .card .progress {
+        width: 120px;
+        height: 120px;
+        border-width: 8px;
+    }
+
+    .card .progress .inner-circle {
+        width: calc(120px - 28px);
+        height: calc(120px - 28px);
+    }
+
+    .card .progress .pro-val {
+        font-size: 1.1rem;
+    }
+
+    .skills-card .card-title {
+        font-size: 1.2rem;
+    }
+
+    .project-container .project-title h2 {
+        font-size: clamp(1.6rem, 5vw, 2.2rem);
+    }
+
+    .project-cards {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        grid-gap: 14px;
+    }
+
+    .card-back .data h3 {
+        font-size: clamp(1.4rem, 5vw, 2rem);
+    }
+
+    #contact {
+        padding: 42px 10px;
+    }
+
+    .contact-title h2 {
+        font-size: clamp(1.6rem, 5vw, 2rem);
+    }
+
+    .contact-card .row {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .contact-card .row .col {
+        width: 100%;
+        padding: 0;
+    }
+
+    .contact-card iframe {
+        width: 100%;
+        height: 300px;
+        padding: 0;
+    }
+
+    .contact-card form {
+        width: 100%;
+        padding: 10px;
+        background-color: #efefef;
+        border-radius: 8px;
+    }
+
+    .contact-card form div {
+        align-items: flex-start;
+    }
+
+    .form-input {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    textarea.form-input {
+        min-height: 100px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .footer-container .social-links {
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
 
-@media (max-width: 768px) {
-    .contact-card .row {
-        flex-direction: column;
+@media (min-width: 50px) and (max-width: 480px) {
+    .navbar-container .logo {
+        font-size: 1rem;
     }
 
-    .contact-card .col iframe {
-        width: 100% !important;  
-        height: 400px !important;
+    .btn-toggler {
+        font-size: 1rem;
+        padding: 6px 8px;
     }
 
-    .contact-card .col form {
+    #home-block .home-container .row .col:first-child {
+        flex-basis: 66%;
+    }
+
+    #home-block .home-container .shape-1 {
+        flex-basis: 34%;
+    }
+
+    #home-block .home-container .shape-1 img {
+        width: clamp(72px, 28vw, 130px);
+    }
+
+    #home-block .title {
+        line-height: 1.2;
+    }
+
+    .about-content .list-group li strong {
+        width: 82px;
+    }
+
+    .education-container .table {
+        min-width: 520px;
         width: 100%;
-        background-color: lightgrey;
-    }
-    .contact-title h2 {
-        font-size: 28px;
     }
 
-    .contact-title h5 {
-        font-size: 16px;
+    .skills-card .card {
+        padding: 12px;
     }
 
-    .form-input{
-        height: 30px;       
-        padding: 2px 2px;    
-        font-size: 15px;
+    #skills .skills-container .row .col .skills-card {
+        grid-template-columns: 1fr;
     }
 
-    textarea.form-input{
-        height: 100px;
-        width: 220px; 
+    .project-cards {
+        grid-template-columns: 1fr;
     }
-    input.form-input{
-        width: 220px; 
+
+    .contact-card iframe {
+        height: 240px;
     }
 }
