@@ -234,8 +234,9 @@ header {
 .about-content .list-group li{
     list-style: none;
     display: grid;
-    grid-template-columns: 120px 20px auto;
-    padding: 10px ;
+    grid-template-columns: 70px 30px 1fr; /* label | colon | text */
+    column-gap: 10px;                      /* equal gap */
+    padding: 10px 0;
     align-items: center;
 }
 
@@ -244,14 +245,13 @@ header {
 }
 
 .about-content .colon{
-    text-align: left;
+    text-align: center;
     font-weight: bold;
 }
 
 .about-content .txt{
     color: black;
     font-weight: bold;
-    margin-left: 5px;
 }
 
 .about-content .content p{
